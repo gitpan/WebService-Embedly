@@ -19,8 +19,16 @@ my %WriteMakefileArgs = (
   "EXE_FILES" => [],
   "LICENSE" => "perl",
   "NAME" => "WebService::Embedly",
-  "PREREQ_PM" => {},
-  "VERSION" => "0.001",
+  "PREREQ_PM" => {
+    "Any::Moose" => 0,
+    "JSON" => 0,
+    "LWP::UserAgent" => 0,
+    "Ouch" => 0,
+    "Regexp::Common" => 0,
+    "Test::More" => "0.88",
+    "URI::Escape" => 0
+  },
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t"
   }

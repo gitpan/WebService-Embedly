@@ -12,7 +12,16 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: WebService-Embedly
+requires:
+  Any::Moose: 0
+  JSON: 0
+  LWP::UserAgent: 0
+  Ouch: 0
+  Regexp::Common: 0
+  Test::More: 0.88
+  URI::Escape: 0
 resources:
   bugtracker: https://github.com/jwieland/embedly-perl/issues
+  homepage: http://search.cpan.org/dist/embedly-perl/
   repository: git://github.com/jwieland/embedly-perl.git
-version: 0.001
+version: 0.002
