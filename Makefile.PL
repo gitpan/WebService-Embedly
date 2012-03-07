@@ -21,14 +21,17 @@ my %WriteMakefileArgs = (
   "NAME" => "WebService::Embedly",
   "PREREQ_PM" => {
     "Any::Moose" => 0,
+    "HTTP::Headers" => 0,
+    "HTTP::Response" => 0,
     "JSON" => 0,
     "LWP::UserAgent" => 0,
     "Ouch" => 0,
     "Regexp::Common" => 0,
+    "Test::Mock::LWP::Dispatch" => 0,
     "Test::More" => "0.88",
     "URI::Escape" => 0
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }

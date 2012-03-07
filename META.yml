@@ -14,14 +14,17 @@ meta-spec:
 name: WebService-Embedly
 requires:
   Any::Moose: 0
+  HTTP::Headers: 0
+  HTTP::Response: 0
   JSON: 0
   LWP::UserAgent: 0
   Ouch: 0
   Regexp::Common: 0
+  Test::Mock::LWP::Dispatch: 0
   Test::More: 0.88
   URI::Escape: 0
 resources:
   bugtracker: https://github.com/jwieland/embedly-perl/issues
   homepage: http://search.cpan.org/dist/embedly-perl/
   repository: git://github.com/jwieland/embedly-perl.git
-version: 0.02
+version: 0.03
