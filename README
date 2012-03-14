@@ -2,13 +2,14 @@ NAME
     WebService::Embedly - Perl interface to the Embedly API
 
 VERSION
-    Version 0.03
+    Version 0.04
 
 SYNOPSIS
         use WebService::Embedly;
         use Ouch qw(:traditional);
 
-        my $embedly = WebService::Embedly->new({ api_key => 'get_your_key_at_embed.ly'});
+        my $embedly = WebService::Embedly->new({ api_key => 'get_your_key_at_embed.ly',
+                                                 maxwidth => 500 });
 
         my $oembed_ref;
         my $e = try {
@@ -21,7 +22,7 @@ SYNOPSIS
         }
 
         #made it here, everything good.
-        my $embed_html = $oembed_ref->{html}
+        my $embed_html = $oembed_ref->{html};
 
 DESCRIPTION
     The "WebService::Embedly" is a class implementing for querying the

@@ -27,4 +27,4 @@ resources:
   bugtracker: https://github.com/jwieland/embedly-perl/issues
   homepage: http://search.cpan.org/dist/embedly-perl/
   repository: git://github.com/jwieland/embedly-perl.git
-version: 0.03
+version: 0.04
