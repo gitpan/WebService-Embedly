@@ -29,9 +29,10 @@ my %WriteMakefileArgs = (
     "Regexp::Common" => 0,
     "Test::Mock::LWP::Dispatch" => 0,
     "Test::More" => "0.88",
-    "URI::Escape" => 0
+    "URI::Escape" => 0,
+    "parent" => 0
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.05",
   "test" => {
     "TESTS" => "t/*.t"
   }
