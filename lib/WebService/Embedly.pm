@@ -12,7 +12,7 @@ use JSON;
 use URI::Escape;
 use Ouch qw(:traditional);
 use Regexp::Common qw /URI/;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 NAME
 
@@ -20,7 +20,7 @@ WebService::Embedly - Perl interface to the Embedly API
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
@@ -367,6 +367,12 @@ sub _request {
   my $embed_url = $in->{embed_url};
   my $base_uri  = $in->{base_uri};
 
+  #quick check to see if we have a url
+  unless ( $embed_url ) {
+    throw 400, 'Missing embed URL does not look like a properly formatted url: ';
+  }
+
+
   my %params = ( key => $self->api_key );
 
   if (ref($embed_url) eq 'ARRAY') {
@@ -377,7 +383,7 @@ sub _request {
 
     my @escaped_urls;
     foreach my $e_url (@{$embed_url}) {
-      unless ( $RE{URI}{HTTP}->matches($e_url) ) {
+      unless ( $RE{URI}{HTTP}->{-scheme => qr/https?/}->matches($e_url) ) {
 	throw 400, 'Look-up URL does not look like a properly formatted url: ' . $e_url;
       }
       push @escaped_urls, uri_escape($e_url) ;
@@ -385,8 +391,7 @@ sub _request {
     $params{urls} = join (',', @escaped_urls);
   }
   else {
-    #quick check to see if we have a url
-    unless ( $RE{URI}{HTTP}->matches($embed_url) ) {
+    unless ( $RE{URI}{HTTP}->{-scheme => qr/https?/}->matches($embed_url) ) {
       throw 400, 'Look-up URL does not look like a properly formatted url: ' . $embed_url;
     }
     $params{url} = uri_escape($embed_url);
