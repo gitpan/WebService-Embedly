@@ -2,7 +2,7 @@ NAME
     WebService::Embedly - Perl interface to the Embedly API
 
 VERSION
-    Version 0.05
+    Version 0.04
 
 SYNOPSIS
         use WebService::Embedly;
@@ -194,8 +194,7 @@ AUTHOR
     Jason Wieland, "<jwieland at cpan.org>"
 
 BUGS
-    Please report any bugs or feature requests to "bug-www-embedly at
-    rt.cpan.org", or through the web interface at
+    Please report any bugs or feature requests through the web interface at
     <https://github.com/jwieland/embedly-perl/issues>. I will be notified,
     and then you'll automatically be notified of progress on your bug as I
     make changes.
@@ -206,6 +205,7 @@ SUPPORT
         perldoc WebService::Embedly
 
     You can also look for information at:
+    https://github.com/jwieland/embedly-perl
 
     *   View source / report bugs
 
